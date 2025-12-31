@@ -1,0 +1,103 @@
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.10)
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #FAFAF8;
+}
+
+.Search {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 2rem;
+   border-radius: 8rem;
+}
+
+.get-recipe-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 4rem;
+    margin: 2rem auto; ;
+    background-color: grey;
+    padding: 1rem;
+    max-width: 50%;
+    border-radius: 12px;
+}
+
+.get-recipe-container button {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.6rem;
+    background-color: black;
+    color: white;
+    font-size: 0.8rem;
+    margin-left: 10rem;
+    margin-top: 1rem;
+}
+
+
+
+.get-recipe-container div {
+    margin-top: 0.5rem;
+}
+
+
+.Search input {
+    border: 1px solid black;
+    border-radius: 5px;
+    resize: none;
+    padding: 0.8rem;
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+}
+
+section h2 {
+    display: center;
+    margin-top: 2rem;
+}
+
+
+.ingredients-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.add img {
+    height: auto;
+}
+
+
+.top img {
+    height: auto;
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+.add button {
+    margin-left: 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.6rem;
+    background-color: black;
+    color: white;
+    font-size: 0.8rem;
+}
