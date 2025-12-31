@@ -1,6 +1,7 @@
 import "../head.css";
 import Recipe from "../components/Recipe"
 import IngredientsList from "../components/IngredientsList"
+import getRecipeFromMistral from "../../ai"
 import { useState } from "react";
 
 export default function Form(){
@@ -11,8 +12,10 @@ export default function Form(){
 
 
 
-    function showFood(){
-        setRecipeShown(prevAns => !prevAns)
+    async function showFood(){
+        const recipe = await getRecipeFromMistral(item)
+        console.log(recipe)
+
     }
 
   
