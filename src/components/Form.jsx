@@ -1,7 +1,6 @@
 import "../head.css";
 import Recipe from "../components/Recipe"
 import IngredientsList from "../components/IngredientsList"
-import { getRecipeFromMistral } from "../../ai"
 import { useState } from "react";
 
 export default function Form(){
@@ -11,11 +10,15 @@ export default function Form(){
     const [recipeShown, setRecipeShown] = useState("")
 
 
-
-    async function showFood(){
-        const recipe = await getRecipeFromMistral(item)
-        setRecipeShown(recipe)
-    }
+    async function showFood() {
+        const res = await fetch("http://localhost:3001/getRecipe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ingredients: item }),
+        });
+        const data = await res.json();
+        setRecipeShown(data.recipe);
+      }
 
     function handleSubmit(formData){
         const newIngredient = formData.get("food")
