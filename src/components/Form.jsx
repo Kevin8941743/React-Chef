@@ -1,24 +1,22 @@
 import "../head.css";
 import Recipe from "../components/Recipe"
 import IngredientsList from "../components/IngredientsList"
-import getRecipeFromMistral from "../../ai"
+import { getRecipeFromMistral } from "../../ai"
 import { useState } from "react";
 
 export default function Form(){
 
     const [item, setItem] = useState([])
 
-    const [recipeShown, setRecipeShown] = useState(false)
+    const [recipeShown, setRecipeShown] = useState("")
 
 
 
     async function showFood(){
         const recipe = await getRecipeFromMistral(item)
-        console.log(recipe)
-
+        setRecipeShown(recipe)
     }
 
-  
     function handleSubmit(formData){
         const newIngredient = formData.get("food")
         setItem(prevItem => [

@@ -1,4 +1,4 @@
-export default function IngredientsList(){
+export default function Recipe(){
     return (
     
     <section>
